@@ -2,7 +2,6 @@
 '''
 A snippet module that loads JSON files and validates them with a JSON schema.
 '''
-import os
 import sys
 import logging
 import json
@@ -13,15 +12,10 @@ coloredlogs.install(fmt='%(asctime)s - %(filename)s:'
                     '%(funcName)s:%(lineno)s | '
                     '%(levelname)s | %(message)s')
 
-def main(json_name="config.json", schema_name="schema.json"):
+def main(json_path, schema_path):
     '''
-    Main Function. Assumes both json and schema files are
-    in same directory of the json_validator file.
-    Loads and validates the JSON file and returns the loaded file.
+    Main Function. Loads and validates the JSON file and returns the loaded file.
     '''
-    directory= os.path.dirname(os.path.abspath(__file__))
-    json_path = directory + "/" + json_name
-    schema_path = directory + "/" + schema_name
 
     with open(json_path, encoding="utf-8") as json_file, \
         open(schema_path, encoding="utf-8") as schema_file:
@@ -40,7 +34,3 @@ def main(json_name="config.json", schema_name="schema.json"):
         sys.exit()
 
     return json_config
-
-
-if __name__ == "__main__":
-    main()
