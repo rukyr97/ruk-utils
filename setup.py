@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 '''
-Setup file for ruk-utils python package.
+Setup file for ruk_utils python package.
 '''
 from setuptools import setup, find_packages
 
 setup(
-	name='ruk-utils',
+	name='ruk_utils',
 	version='1.0',
-	url='https://github.com/rukyr97/ruk-utils',
+	url='https://github.com/rukyr97/ruk_utils',
 	author='Ruben Queiros',
 	description='A growing repo of code snippets, in the form of a python package,'
 	'that I found useful saving',
