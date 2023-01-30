@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name='rukutils',
-	version='1.0',
+	version='1.0.1',
 	url='https://github.com/rukyr97/rukutils',
 	author='Ruben Queiros',
 	description='A growing repo of code snippets, in the form of a python package,'
